@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divyanshi Jain — B.Tech CSE Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="brand">
+        <span class="logo-box">DJ</span>
+        <div class="brand-text">
+          <span class="name">Divyanshi Jain</span>
+          <span class="subtitle">3rd Year B.Tech CSE • CGPA: 9.8</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openResumeModal()">View Resume ↗</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="toggleMobileMenu()">About</a>
+      <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
+      <a href="#projects" onclick="toggleMobileMenu()">Projects</a>
+      <a href="#hobbies" onclick="toggleMobileMenu()">Hobbies</a>
+      <a href="#blog" onclick="toggleMobileMenu()">Blog</a>
+      <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+      <button class="btn btn-primary w-full" onclick="openResumeModal(); toggleMobileMenu();">View Resume ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="status-dot"></span>
+            <span>3rd Year B.Tech CSE (5th Sem) • IPS Academy, Indore • <strong>CGPA: 9.8</strong></span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Divyanshi Jain</span>.<br>
+            I build practical software & AI systems.
+          </h1>
+
+          <p class="hero-desc">
+            Computer Science undergraduate passionate about Computer Vision, Data Structures & Algorithms, and Full-Stack Engineering. Focused on creating reliable software that solves real-world campus and community challenges.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore My Projects ↓</a>
+            <button class="btn btn-secondary" onclick="openResumeModal()">Full Resume ↗</button>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Academic Quick Stats Card -->
+        <div class="hero-card">
+          <div class="card-header">
+            <span class="card-tag">Academic Profile</span>
+            <span class="badge-green">Active Student</span>
+          </div>
+
+          <ul class="stats-list">
+            <li>
+              <span>Degree & Sem:</span>
+              <strong>B.Tech CSE (5th Sem)</strong>
+            </li>
+            <li>
+              <span>Current College:</span>
+              <strong>IPS Academy, Indore</strong>
+            </li>
+            <li>
+              <span>College CGPA:</span>
+              <strong class="text-green">9.8 / 10.0</strong>
+            </li>
+            <li>
+              <span>Class XII (Pushpa Convent):</span>
+              <strong>90.8% <span class="highlight">(1st Rank)</span></strong>
+            </li>
+            <li>
+              <span>Class X (Pushpa Convent):</span>
+              <strong>89.4%</strong>
+            </li>
+            <li>
+              <span>DSA Problem Count:</span>
+              <strong>350+ Solved</strong>
+            </li>
+          </ul>
+
+          <button class="btn btn-dark w-full mt-4" onclick="openResumeModal()">Open Official Resume ↗</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT & EDUCATION ==================== -->
+    <section id="about" class="section bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">● Background</span>
+          <h2 class="section-title">About Me & Education</h2>
+          <p class="section-subtitle">
+            Consistent academic dedication coupled with real engineering experience.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- College Card -->
+          <div class="card">
+            <div class="card-top">
+              <span class="date-badge">2024 – 2028</span>
+              <span class="score-badge">CGPA: 9.8</span>
+            </div>
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <p class="institute">IPS Academy, Institute of Engineering and Science, Indore</p>
+            <p class="card-desc">
+              Currently in 3rd Year (5th Semester). Maintaining a 9.8 CGPA across 5 semesters with subjects like DSA, DBMS, OS, Computer Networks, and Software Engineering.
+            </p>
+          </div>
+
+          <!-- Class 12 Card -->
+          <div class="card">
+            <div class="card-top">
+              <span class="date-badge">2023 – 2024</span>
+              <span class="score-badge">90.8% • 1st Rank</span>
+            </div>
+            <h3>Class XII — Senior Secondary (PCM)</h3>
+            <p class="institute">Pushpa Convent Higher Secondary School</p>
+            <p class="card-desc">
+              Secured 1st Rank in the school with a 90.8% aggregate score. Built strong analytical foundations in Mathematics, Physics, and Chemistry.
+            </p>
+          </div>
+
+          <!-- Class 10 Card -->
+          <div class="card">
+            <div class="card-top">
+              <span class="date-badge">2021 – 2022</span>
+              <span class="score-badge">89.4%</span>
+            </div>
+            <h3>Class X — Secondary School Certificate</h3>
+            <p class="institute">Pushpa Convent Higher Secondary School</p>
+            <p class="card-desc">
+              Secured 89.4% marks in the board examinations, participating actively in school science exhibitions, math quizzes, and student seminars.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">● Technical Stack</span>
+          <h2 class="section-title">Skills & Tooling</h2>
+          <p class="section-subtitle">Technologies and concepts I work with.</p>
+        </div>
+
+        <div class="cards-grid-4">
+          <div class="card">
+            <span class="pill-number">01</span>
+            <h3>Languages</h3>
+            <div class="tags-wrap">
+              <span class="tag">C++</span>
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="pill-number">02</span>
+            <h3>Core CS</h3>
+            <div class="tags-wrap">
+              <span class="tag">DSA</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Computer Networks</span>
+              <span class="tag">OOP</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="pill-number">03</span>
+            <h3>Web & AI</h3>
+            <div class="tags-wrap">
+              <span class="tag">OpenCV</span>
+              <span class="tag">YOLOv8</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Flask</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="pill-number">04</span>
+            <h3>Developer Tools</h3>
+            <div class="tags-wrap">
+              <span class="tag">VS Code</span>
+              <span class="tag">Git & GitHub</span>
+              <span class="tag">MySQL Workbench</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section bg-white">
+      <div class="container">
+        <div class="project-header-row">
+          <div>
+            <span class="section-tag">● Portfolio</span>
+            <h2 class="section-title">Projects Built by Me</h2>
+            <p class="section-subtitle">Real-world applications with clean architectures and databases.</p>
+          </div>
+
+          <!-- Project Search -->
+          <div class="search-box">
+            <input type="text" id="projectSearch" placeholder="Search projects by keyword...">
+          </div>
+        </div>
+
+        <!-- Filter Categories -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterProjects('All')">All Projects</button>
+          <button class="filter-btn" onclick="filterProjects('AI & Computer Vision')">AI & Vision</button>
+          <button class="filter-btn" onclick="filterProjects('Full-Stack Web')">Full-Stack Web</button>
+          <button class="filter-btn" onclick="filterProjects('Academic Portals')">Academic Portals</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="cards-grid-3 mt-6" id="projectsContainer">
+          
+          <!-- Project 1 -->
+          <div class="project-card" data-category="AI & Computer Vision" data-keywords="crowd monitoring safety alert opencv yolo python computer vision">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&auto=format&fit=crop&q=60" alt="AI Computer Vision" class="project-img">
+            <div class="project-card-top">
+              <span class="badge-cat">AI & Vision</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3>AI-Based Crowd Monitoring & Safety Alert System</h3>
+            <p class="project-desc">
+              Real-time computer vision system that tracks crowd density in enclosed areas and triggers automatic alarms when capacity is exceeded to prevent rushes. Achieved 94.2% accuracy at 28 FPS.
+            </p>
+            <div class="tags-wrap">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">YOLOv8</span>
+              <span class="tag">Flask</span>
+            </div>
+            <button class="btn btn-outline w-full mt-4" onclick="showProjectDetails(1)">View Case Study ↗</button>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="Full-Stack Web" data-keywords="student expense budget tracker javascript localstorage html css">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&auto=format&fit=crop&q=60" alt="Finance Tracker" class="project-img">
+            <div class="project-card-top">
+              <span class="badge-cat highlight-bg">Full-Stack Web</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3>Student Smart Expense & Budget Tracker</h3>
+            <p class="project-desc">
+              Zero-dependency client-side budgeting tool built for college students to track canteen, books, and transit allowances with live warning thresholds and offline persistence.
+            </p>
+            <div class="tags-wrap">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+            </div>
+            <button class="btn btn-outline w-full mt-4" onclick="showProjectDetails(2)">View Case Study ↗</button>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="Academic Portals" data-keywords="college report card sgpa portal java mysql jdbc dbms">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format&fit=crop&q=60" alt="Academic Portal" class="project-img">
+            <div class="project-card-top">
+              <span class="badge-cat">Academic Portals</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>College Student Report Card & SGPA Portal</h3>
+            <p class="project-desc">
+              Database-driven grading portal implementing 3NF normalization to automate semester SGPA and cumulative CGPA computations with ACID transaction guarantees.
+            </p>
+            <div class="tags-wrap">
+              <span class="tag">Java</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JDBC</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <button class="btn btn-outline w-full mt-4" onclick="showProjectDetails(3)">View Case Study ↗</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOBBIES ==================== -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">● Beyond The Terminal</span>
+          <h2 class="section-title">Life & Hobbies</h2>
+          <p class="section-subtitle">What keeps me energized, creative, and grounded.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="card">
+            <div class="emoji-icon">✈️</div>
+            <h3>Travelling & Exploring</h3>
+            <p class="card-desc">Exploring historic heritage, mountain towns, and ancient temples across Madhya Pradesh and India.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji-icon">📚</div>
+            <h3>Reading Books</h3>
+            <p class="card-desc">Non-fiction books on habit formation, productivity, and biographies of visionary engineers.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji-icon">🏡</div>
+            <h3>Family Time</h3>
+            <p class="card-desc">Evenings sharing chai with family, discussing thoughts, and cherishing simple milestones.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji-icon">🥘</div>
+            <h3>Indore Street Food</h3>
+            <p class="card-desc">Proud Indori! Weekend explorations through Sarafa Bazaar and 56 Dukan for poha-jalebi and bhutte ka kees.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji-icon">🎵</div>
+            <h3>Music & Melodies</h3>
+            <p class="card-desc">Acoustic tracks and classical instrumental tunes that help maintain flow during coding sessions.</p>
+          </div>
+
+          <div class="card internship-card">
+            <div class="emoji-icon">💼</div>
+            <h3 class="highlight">SDE Internships Open</h3>
+            <p class="card-desc">Actively seeking Summer 2026 Software Development Engineer (SDE) and AI/ML internship roles.</p>
+            <a href="#contact" class="link-arrow">Let's connect →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BLOG & NOTES ==================== -->
+    <section id="blog" class="section bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">● Writing & Reflections</span>
+          <h2 class="section-title">Tech Blog & Notes</h2>
+          <p class="section-subtitle">Sharing real learnings from engineering projects and LeetCode problem solving.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <article class="card article-card">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=60" alt="Computer Vision Blog" class="article-img">
+            <div class="card-top">
+              <span class="highlight text-sm">Computer Vision</span>
+              <span class="text-muted">Sep 2025</span>
+            </div>
+            <h3>How I Built an AI Crowd Density Detector using OpenCV</h3>
+            <p class="card-desc">Extracting live CCTV frames, fine-tuning YOLOv8 head detection, and triggering capacity sirens.</p>
+            <div class="article-footer">
+              <span class="read-time">5 min read</span>
+              <button class="clap-btn" onclick="clapArticle('art-1')">👏 <span id="clap-art-1">42</span></button>
+            </div>
+          </article>
+
+          <article class="card article-card">
+            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60" alt="OS DBMS Blog" class="article-img">
+            <div class="card-top">
+              <span class="highlight text-sm">Academic Core</span>
+              <span class="text-muted">Aug 2025</span>
+            </div>
+            <h3>Mastering Operating Systems & DBMS in 5th Semester</h3>
+            <p class="card-desc">Semaphores, CPU scheduling, ACID transactions, 3NF normalization, and B-Tree indexing for placements.</p>
+            <div class="article-footer">
+              <span class="read-time">6 min read</span>
+              <button class="clap-btn" onclick="clapArticle('art-2')">👏 <span id="clap-art-2">38</span></button>
+            </div>
+          </article>
+
+          <article class="card article-card">
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&auto=format&fit=crop&q=60" alt="DSA Practice Blog" class="article-img">
+            <div class="card-top">
+              <span class="highlight text-sm">DSA & Practice</span>
+              <span class="text-muted">Jul 2025</span>
+            </div>
+            <h3>Why Solving 350+ DSA Questions Taught Me Consistency</h3>
+            <p class="card-desc">Daily LeetCode routines, balancing semester lab files, and building persistent problem-solving habits.</p>
+            <div class="article-footer">
+              <span class="read-time">4 min read</span>
+              <button class="clap-btn" onclick="clapArticle('art-3')">👏 <span id="clap-art-3">65</span></button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Guestbook / Feedback -->
+        <div class="guestbook-card mt-8">
+          <h3>Visitor Guestbook & Recommendations</h3>
+          <p class="text-muted text-sm mb-4">Leave feedback or a recommendation. Stored in your browser's localStorage.</p>
+
+          <form id="guestbookForm" class="guestbook-form">
+            <div class="form-row">
+              <input type="text" id="guestName" placeholder="Your Name & College / Company" required>
+              <input type="text" id="guestMsg" placeholder="Your message or feedback..." required>
+            </div>
+            <button type="submit" class="btn btn-dark">Post Note ✍️</button>
+          </form>
+
+          <div id="guestbookList" class="guestbook-list mt-4">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+          <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <span class="section-tag">● Get In Touch</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">
+            Open for software engineering internship discussions, hackathons, and collaborative open-source projects.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-item">
+              <span class="text-muted">Email:</span>
+              <a href="mailto:divyanshijaindj2006@gmail.com" class="contact-link">divyanshijaindj2006@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="text-muted">College:</span>
+              <strong>IPS Academy, Institute of Engineering and Science, Indore</strong>
+            </div>
+            <div class="contact-item">
+              <span class="text-muted">Location:</span>
+              <strong>Indore, Madhya Pradesh, India</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-box">
+          <h3>Send a Message</h3>
+          <div id="contactSuccess" class="alert-success hidden">
+            ✓ Thank you! Your message has been sent successfully.
+          </div>
+
+          <form id="contactForm" class="mt-4">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <label>Subject</label>
+              <input type="text" placeholder="Internship Opportunity / Inquiry" required>
+            </div>
+
+            <div class="form-group mt-3">
+              <label>Message</label>
+              <textarea rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-full mt-4">Send Message ✉</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© 2026 Divyanshi Jain • Pure HTML, CSS, JavaScript Portfolio</div>
+      <a href="#hero" class="text-muted">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ==================== RESUME MODAL ==================== -->
+  <div id="resumeModal" class="modal-backdrop hidden">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <strong>Divyanshi Jain — Curriculum Vitae</strong>
+        <div class="flex-gap">
+          <button class="btn btn-outline text-xs" onclick="window.print()">Print / Save PDF</button>
+          <button class="close-btn" onclick="closeResumeModal()">✕</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <h1>DIVYANSHI JAIN</h1>
+        <p class="highlight">3rd Year B.Tech CSE (5th Sem) • IPS Academy, Indore • CGPA: 9.8</p>
+        <p class="text-muted">Email: divyanshijaindj2006@gmail.com | Location: Indore, MP</p>
+
+        <hr class="divider">
+
+        <h3 class="modal-section-title">Education</h3>
+        <div class="resume-item">
+          <strong>B.Tech in Computer Science & Engineering (2023–2027)</strong>
+          <p>IPS Academy, Indore — <span class="badge-green">CGPA: 9.8 / 10.0</span></p>
+        </div>
+        <div class="resume-item">
+          <strong>Class XII — Pushpa Convent Higher Secondary School (2021–2023)</strong>
+          <p>Score: <span class="badge-green">90.8% (1st Rank in School)</span></p>
+        </div>
+        <div class="resume-item">
+          <strong>Class X — Pushpa Convent Higher Secondary School (2019–2021)</strong>
+          <p>Score: <span class="badge-green">89.4%</span></p>
+        </div>
+
+        <hr class="divider">
+
+        <h3 class="modal-section-title">Technical Skills</h3>
+        <p><strong>Languages:</strong> C++, Java, Python, JavaScript, SQL, HTML5, CSS3</p>
+        <p><strong>Core CS:</strong> Data Structures & Algorithms (350+ solved), DBMS, OS, Computer Networks</p>
+        <p><strong>Tools:</strong> OpenCV, YOLOv8, Git, GitHub, MySQL, VS Code, Linux</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-dark" onclick="closeResumeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="projectModal" class="modal-backdrop hidden">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <strong id="pmTitle">Project Overview</strong>
+        <button class="close-btn" onclick="closeProjectModal()">✕</button>
+      </div>
+
+      <div class="modal-body" id="pmContent">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-dark" onclick="closeProjectModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="javascript.js"></script>
+</body>
+</html>
